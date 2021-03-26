@@ -1,12 +1,43 @@
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 100;
+    src: url('../fonts/Roboto-Thin.ttf');
+}
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 300;
+    src: url('../fonts/Roboto-Light.ttf');
+}
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 400;
+    src: url('../fonts/Roboto-Regular.ttf');
+}
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 500;
+    src: url('../fonts/Roboto-Medium.ttf');
+}
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 700;
+    src: url('../fonts/Roboto-Bold.ttf');
+}
 .fa {
     font-size: 18px;
 }
 p {
     margin-bottom: 0;
 }
+textarea:focus {
+    outline: none;
+}
 body > div {
+    background-color: #181818;
     display: flex;
     flex-direction: column;
+    color: #fff;
+    font-family: 'Roboto';
 }
 body > div > div:first-child {
     display: flex;
@@ -43,6 +74,12 @@ body > div > div:first-child > div:last-child > a, .col-9 > div:nth-child(3) > d
 a:hover {
     text-decoration: none;
 }
+.col-9 > div:nth-child(3) > div > div > .btn {
+    margin-top: 8px;
+    padding: 0;
+    color: rgba(255,255,255,.625);
+    font-size: 13px;
+}
 .form-control:focus {
     border-color: #ced4da;
     box-shadow: none;
@@ -60,17 +97,38 @@ a:hover {
     width: 100%;
     height: 100%;
 }
+.col-3 > div:nth-child(2) > .card > div:first-child > div:first-child {
+    min-width: 168px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.col-3 > div:nth-child(2) > .card > div:first-child > div:first-child > img {
+    height: 94px;
+}
 .col-3 > div:nth-child(2) > .card > div:nth-child(2) > div:last-child {
     display: flex;
+    margin-top: 2px;
 }
 .col-3 > div:nth-child(2) > .card > div:nth-child(2) > div:last-child > span {
-    padding: 0 4px;
     font-size: 12px;
+    border-radius: 2px;
 }
 .col-3 > div:nth-child(2) > .card > div:nth-child(2) > div:last-child > span:first-child {
-    border: 1px solid red;
-    border-radius: 2px;
-    color: red;
+    padding: 0 4px;
+    color: #ff4e45;
+    border: 1px solid #ff4e45;
+}
+.col-3 > div:nth-child(2) > .card > div:nth-child(2) > div:last-child > span:not(:first-child) {
+    background-color: rgba(255,255,255,.1);
+    padding: 1px 4px;
+}
+.col-3 > div:nth-child(2) > .card > div:nth-child(2) > div:last-child > span:nth-child(2) {
+    color: rgba(255,255,255,.5);
+}
+.col-3 > div:nth-child(2) > .card > div:nth-child(2) > div:last-child > span:nth-child(n+3) {
+    color: #2ba640;
 }
 .col-9 > div:first-child > div > div:last-child > div:first-child {
     display: flex;
@@ -157,116 +215,150 @@ a:hover {
     margin-right: 8px;
 }
 .col-3 > div:nth-child(2) > .card {
+    background-color: transparent;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     border: 0;
     border-radius: 0;
 }
+.col-3 > div:nth-child(2) > .card:hover {
+    cursor: pointer;
+}
 .col-3 > div:nth-child(2) > .card:not(:last-child) {
     margin-bottom: 8px;
 }
-.col-3 > div:nth-child(2) > .card > div:first-child > div > div:first-child > div:first-child > .btn {
-    margin: 4px 4px 0 0;
+.col-3 > div:nth-child(2) > .card > .btn, .col-9 > div:nth-child(4) > div:last-child > div:first-child > div > div:last-child > div > .btn {
+    color: rgba(255,255,255,.5);
 }
-.col-3 > div:nth-child(2) > .card > div:first-child > div > div:first-child > div:first-child > .btn {
-    background-color: rgba(0,0,0,.25);
+.col-3 > div:nth-child(2) > .card > .btn:hover, .col-9 > div:nth-child(4) > div:last-child > div:first-child > div > div:last-child > div > .btn:hover {
+    color: #fff;
+}
+.col-3 > div:nth-child(2) > .card > div:first-child > div:last-child > div:first-child > div:first-child > .btn {
+    background-color: rgba(0,0,0,.625);
     width: 28px;
     height: 28px;
+    margin: 4px 4px 0 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #fff;
 }
 .col-3 > div:nth-child(2) > .card > div:first-child {
     display: flex;
+    margin-right: 8px;
     position: relative;
 }
-.col-3 > div:nth-child(2) > .card > div:first-child > video {
-    width: 168px;
-    height: 94px;
-}
-.col-3 > div:nth-child(2) > .card > div:first-child > div, .col-3 > div:nth-child(2) > .card > div:first-child > div > div {
+.col-3 > div:nth-child(2) > .card > div:first-child > div:last-child, .col-3 > div:nth-child(2) > .card > div:first-child > div:last-child > div {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
 }
-.col-3 > div:nth-child(2) > .card > div:first-child > div > div:first-child {
+.col-3 > div:nth-child(2) > .card > div:first-child > div:last-child > div:first-child {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.col-3 > div:nth-child(2) > .card > div:first-child > div > div:first-child > div:first-child {
+.col-3 > div:nth-child(2) > .card > div:first-child > div:last-child > div:first-child > div:first-child {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
-.col-3 > div:nth-child(2) > .card > div:first-child > div > div:first-child > div:last-child {
+.col-3 > div:nth-child(2) > .card > div:first-child > div:last-child > div:first-child > div:last-child {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
-.col-3 > div:nth-child(2) > .card > div:first-child > div > div:first-child > div:last-child > span {
-    background-color: rgba(0,0,0,.25);
+.col-3 > div:nth-child(2) > .card > div:first-child > div:last-child > div:first-child > div:last-child > span {
+    background-color: rgba(0,0,0,.625);
     margin-right: 4px;
-    padding: 0 4px;
+    padding: 1px 4px;
+    color: rgba(255,255,255,.875);
     font-size: 12px;
+    font-weight: 500;
     border-radius: 2px;
 }
-.col-3 > div:nth-child(2) > .card > div:first-child > div > div:first-child > div:last-child > span:last-child {
+.col-3 > div:nth-child(2) > .card > div:first-child > div:last-child > div:first-child > div:last-child > span:last-child {
     margin-bottom: 4px;
 }
-.col-3 > div:nth-child(2) > .card > div:first-child > div > div:first-child > div:last-child > .progress {
+.col-3 > div:nth-child(2) > .card > div:first-child > div:last-child > div:first-child > div:last-child > .progress {
+    background-color: #909090;
     height: 4px;
     border-radius: 0;
 }
-.col-3 > div:nth-child(2) > .card > div:first-child > div > div:nth-child(2) {
-    width: 40%;
+.progress-bar {
+    background-color: #ff0000;
+}
+.col-3 > div:nth-child(2) > .card > div:first-child > div:last-child > div:nth-child(2) {
+    background-color: rgba(0,0,0,.625);
+    width: 35%;
+    margin-left: 65%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-left: 60%;
+    color: #fff;
 }
-.col-3 > div:nth-child(2) > .card > div:first-child > div > div:nth-child(3) {
+.col-3 > div:nth-child(2) > .card > div:first-child > div:last-child > div:nth-child(2) > span {
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+.col-3 > div:nth-child(2) > .card > div:first-child > div:last-child > div:nth-child(3) {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #fff;
 }
-.col-3 > div:nth-child(2) > .card > div:first-child > div > div:nth-child(3) > i{
+.col-3 > div:nth-child(2) > .card > div:first-child > div:last-child > div:nth-child(3) > i{
     font-size: 36px;
 }
-.col-3 > div:nth-child(2) > .card > div:first-child > div > div:last-child {
-    background-color: rgba(0,0,0,.25);
+.col-3 > div:nth-child(2) > .card > div:first-child > div:last-child > div:last-child {
+    background-color: rgba(0,0,0,.625);
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #fff;
 }
-.col-3 > div:nth-child(2) > .card > div:first-child > div > div:last-child > span {
-    margin-left: 10px;
+.col-3 > div:nth-child(2) > .card > div:first-child > div:last-child > div:last-child > span {
+    margin-left: 8px;
+    font-size: 13px;
+    font-weight: 500;
+}
+.col-3 > div:nth-child(2) > .card > div:first-child > div:last-child > div:last-child > i {
+    font-size: 16px;
 }
 .col-3 > div:nth-child(2) > .card > div:nth-child(2) {
     width: 100%;
-    font-size: 12px;
+    font-size: 13px;
+    line-height: 18px;
 }
 .col-3 > div:nth-child(2) > .card > div:nth-child(2) > span {
-    display: block;
-    font-weight: bold;
+    color: #fff;
+    font-weight: 700;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 16px;
 }
 .col-3 > div:nth-child(2) > .card > div:nth-child(2) > div:nth-child(2) {
     display: flex;
     align-items: center;
+    color: rgba(255,255,255,.5);
 }
 .col-3 > div:nth-child(2) > .card > div:nth-child(2) > div:nth-child(2) > i, .col-9 > div:nth-child(3) > div > div > div > div > i {
-    margin-left: 6px;
+    margin-left: 4px;
 }
 .col-3 > div:nth-child(2) > .card > div:nth-child(2) > div:nth-child(2) > i {
-    font-size: 13px;
+    font-size: 12px;
 }
 .col-3 > div:nth-child(2) > .card > div:nth-child(2) > div:nth-child(3) {
     display: flex;
     align-items: center;
+    color: rgba(255,255,255,.5);
 }
 .col-3 > div:nth-child(2) > .card > div:nth-child(2) > div:nth-child(3) > span::before {
     content: "•";
@@ -275,8 +367,51 @@ a:hover {
 body > div > div:first-child > div:last-child > a > img {
     height: 32px;
 }
-
-
+.col-3 > div:nth-child(2) > .card.live > div:first-child > div:last-child > div:first-child > div:last-child > span {
+    display: none;
+}
+.col-3 > div:nth-child(2) > .card.live > div:nth-child(2) > div:nth-child(3) > div > span:nth-child(2) {
+    display: none;
+}
+.col-3 > div:nth-child(2) > .card:not(.live) > div:nth-child(2) > div:nth-child(3) > div > span:last-child {
+    display: none;
+}
+.col-3 > div:nth-child(2) > .card.live > div:nth-child(2) > div:nth-child(3) > span {
+    display: none;
+}
+.col-3 > div:nth-child(2) > .card.new > div:nth-child(2) > div:last-child > span:not(:nth-child(2)) {
+    display: none;
+}
+.col-3 > div:nth-child(2) > .card.fund > div:nth-child(2) > div:last-child > span:not(:nth-child(3)) {
+    display: none;
+}
+.col-3 > div:nth-child(2) > .card.buy > div:nth-child(2) > div:last-child > span:not(:nth-child(4)) {
+    display: none;
+}
+.col-3 > div:nth-child(2) > .card.rent > div:nth-child(2) > div:last-child > span:not(:nth-child(5)) {
+    display: none;
+}
+.col-3 > div:nth-child(2) > .card.both > div:nth-child(2) > div:last-child > span:not(:nth-child(6)) {
+    display: none;
+}
+.col-3 > div:nth-child(2) > .card > div:first-child > div:last-child > div:not(:first-child) {
+    display: none;
+}
+.col-3 > div:nth-child(2) > .card.list > div:first-child > div:last-child > div:nth-child(2) {
+    display: flex;
+}
+.col-3 > div:nth-child(2) > .card.list > div:first-child > div:last-child > div:not(:nth-child(2)) {
+    display: none;
+}
+.col-3 > div:nth-child(2) > .card.list > div:first-child > div:last-child > div:first-child > div:last-child > .progress {
+    visibility: hidden;
+}
+.col-3 > div:nth-child(2) > .card.live > div:nth-child(2) > div:last-child > span:not(:first-child) {
+    display: none;
+}
+.col-9 > div:nth-child(4) > div:last-child > div:first-child > div > div:first-child {
+    margin-bottom: 32px;
+}
 .col-9 > div:nth-child(4) > div:last-child > div:first-child > div > div:first-child > div:first-child {
     display: flex;
     align-items: flex-start;
@@ -291,6 +426,18 @@ body > div > div:first-child > div:last-child > a > img {
 .col-9 > div:nth-child(4) > div:first-child {
     display: flex;
     align-items: center;
+    margin-bottom: 20px;
+}
+.col-9 > div:nth-child(4) > div:first-child > div {
+    margin-right: 24px;
+}
+.col-9 > div:nth-child(4) > div:first-child > .btn {
+    color: rgba(255,255,255,.5);
+    font-size: 14px;
+}
+.col-9 > div:nth-child(4) > div:first-child > .btn > i {
+    margin-right: 6px;
+    font-size: 14px;
 }
 .col-9 > div:nth-child(4) > div:last-child > div:first-child > div > div:first-child > div:first-child > div:first-child, .col-9 > div:nth-child(4) > div:last-child > div:first-child > div > div:last-child > div > a {
     min-width: 40px;
@@ -299,19 +446,112 @@ body > div > div:first-child > div:last-child > a > img {
     height: 40px;
 }
 .col-9 > div:nth-child(4) > div:last-child > div:first-child > div > div:first-child > div:first-child > textarea {
+    background-color: transparent;
     width: 100%;
+    margin-bottom: 8px;
+    padding: 4px 0;
+    color: #fff;
+    font-size: 14px;
+    border-width: 0 0 1px 0;
+    border-color: rgba(255,255,255,.1);
+}
+.col-9 > div:nth-child(4) > div:last-child > div:first-child > div > div:first-child > div:first-child > textarea:focus {
+    border-color: #000;
+}
+.col-9 > div:nth-child(4) > div:last-child > div:first-child > div > div:first-child > div:first-child > textarea::placeholder {
+    color: rgba(255,255,255,.5);
 }
 .col-9 > div:nth-child(4) > div:last-child > div:first-child > div > div:first-child > div:last-child {
+    margin-top: -2px;
     display: flex;
     justify-content: flex-end;
+}
+.col-9 > div:nth-child(4) > div:last-child > div:first-child > div > div:first-child > div:last-child > .btn {
+    line-height: 18px;
+    padding: 8px 16px;
+}
+.col-9 > div:nth-child(4) > div:last-child > div:first-child > div > div:first-child > div:last-child > .btn:not(:last-child) {
+    margin-right: 8px;
+}
+.col-9 > div:nth-child(4) > div:last-child > div:first-child > div > div:first-child > div:last-child > .btn:last-child {
+    background-color: #3ea6ff;
+}
+.col-9 > div:nth-child(4) > div:last-child > div:first-child > div > div:first-child > div:last-child > .btn:last-child:disabled {
+    background-color: #606060;
+}
+.col-9 > div:nth-child(4) > div:last-child > div:first-child > div > div:first-child > div:last-child > .btn:first-child > span {
+    color: rgba(255,255,255,.625);
+}
+.col-9 > div:nth-child(4) > div:last-child > div:first-child > div > div:first-child > div:last-child > .btn:last-child > span {
+    color: #030303;
+    font-weight: 500;
 }
 .col-9 > div:nth-child(4) > div:last-child > div:first-child > div > div:last-child > div {
     display: flex;
     align-items: flex-start;
 }
+.col-9 > div:nth-child(4) > div:last-child > div:first-child > div > div:last-child > div:not(:last-child) {
+    margin-bottom: 20px;
+}
 .col-9 > div:nth-child(4) > div:last-child > div:first-child > div > div:last-child > div > div > .btn {
     display: flex;
+    align-items: center;
+    color: #3ea6ff;
+    font-weight: 500;
 }
 .col-9 > div:nth-child(4) > div:last-child > div:first-child > div > div:last-child > div > div > .btn > i {
-    margin-right: 6px;
+    margin-right: 14px;
+    font-size: 14px;
+}
+
+
+.col-9 > div:nth-child(4) > div:last-child > div:first-child > div > div:last-child > div > div > *:nth-child(-n+2) {
+    margin-bottom: 4px;
+}
+.col-9 > div:nth-child(4) > div:last-child > div:first-child > div > div:last-child > div > div > div:first-child {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    line-height: 18px;
+}
+.col-9 > div:nth-child(4) > div:last-child > div:first-child > div > div:last-child > div > div > div:first-child > *:not(:first-child) {
+    margin-left: 6px;
+    color:rgba(255,255,255,.5);
+}
+.col-9 > div:nth-child(4) > div:last-child > div:first-child > div > div:last-child > div > div > div:first-child > a {
+    color: #fff;
+    font-weight: 500;
+}
+.col-9 > div:nth-child(4) > div:last-child > div:first-child > div > div:last-child > div > div > div:first-child > i {
+    font-size: 10px;
+    margin-bottom: 2px;
+}
+.col-9 > div:nth-child(4) > div:last-child > div:first-child > div > div:last-child > div > div > p {
+    font-size: 14px;
+    line-height: 20px;
+}
+.col-9 > div:nth-child(4) > div:last-child > div:first-child > div > div:last-child > div > div > *:nth-child(n+3) {
+    margin-left: -9px;
+}
+.col-9 > div:nth-child(4) > div:last-child > div:first-child > div > div:last-child > div > div > div:nth-child(3) {
+    display: flex;
+}
+.col-9 > div:nth-child(4) > div:last-child > div:first-child > div > div:last-child > div > div > div > .btn {
+    display: flex;
+    align-items: center;
+    color: rgba(255,255,255,.5);
+}
+.col-9 > div:nth-child(4) > div:last-child > div:first-child > div > div:last-child > div > div > div > .btn > .fa {
+    margin-right: 8px;
+    font-size: 16px;
+}
+.col-9 > div:nth-child(4) > div:last-child > div:first-child > div > div:last-child > div > div > div > .btn:hover > .fa {
+    color: #fff;
+}
+.col-9 > div:nth-child(4) > div:last-child > div:first-child > div > div:last-child > div > div > div > .btn > span {
+    font-size: 13px;
+    line-height: 18px;
+}
+.col-9 > div:nth-child(3) > div > div, .col-9 > div:nth-child(4) > div:last-child > div:first-child > div > div:first-child > div:first-child > textarea, .col-9 > div:nth-child(4) > div:last-child > div:first-child > div > div:last-child > div > div {
+    margin-left: 16px;
 }
